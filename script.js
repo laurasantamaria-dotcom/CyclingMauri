@@ -137,6 +137,64 @@ new Chart(document.getElementById("copaCatalana"), {
     }
 });
 
+const cursesEspanya = dadesValides.filter(c => c.nivell === "espanya");
+
+new Chart(document.getElementById("copaEspanya"), {
+    type: "line",
+    data: {
+        labels: cursesEspanya.map(c => c.cursa),
+        datasets: [{
+            data: cursesEspanya.map(c => c.posicio),
+            borderColor: "#2563eb",
+            backgroundColor: "rgba(37,99,235,0.15)",
+            fill: true,
+            tension: 0.3
+        }]
+    },
+    options: {
+        plugins: {
+            legend: {
+                display: false
+            }
+        },
+        scales: {
+            y: {
+                reverse: true,
+                beginAtZero: false
+            }
+        }
+    }
+});
+
+const cursesNacionals = dadesValides.filter(c => c.nivell === "nacional");
+
+new Chart(document.getElementById("nacionals"), {
+    type: "line",
+    data: {
+        labels: cursesNacionals.map(c => c.cursa),
+        datasets: [{
+            data: cursesNacionals.map(c => c.posicio),
+            borderColor: "#dc2626",
+            backgroundColor: "rgba(220,38,38,0.15)",
+            fill: true,
+            tension: 0.3
+        }]
+    },
+    options: {
+        plugins: {
+            legend: {
+                display: false
+            }
+        },
+        scales: {
+            y: {
+                reverse: true,
+                beginAtZero: false
+            }
+        }
+    }
+});
+
 // ---------- Taula de curses ----------
 
 const tbody = document.querySelector("#taula-curses tbody");
