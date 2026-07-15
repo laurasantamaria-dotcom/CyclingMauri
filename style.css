@@ -10,60 +10,79 @@ body{
 .hero{
     background:linear-gradient(135deg,#0f172a,#2563eb);
     color:white;
-    padding:60px;
+    padding:30px;
     text-align:center;
-    border-radius:0 0 30px 30px;
+    border-radius:0 0 20px 20px;
 }
 
 .hero h1{
     margin:0;
-    font-size:52px;
+    font-size:34px;
 }
 
 .hero p{
-    font-size:22px;
-    margin:10px 0;
+    font-size:18px;
+    margin:6px 0;
 }
 
 .subtitol{
     opacity:.85;
-    font-size:16px;
+    font-size:15px;
+}
+
+/* ---------- MENÚ ---------- */
+
+.menu{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    background:white;
+    padding:12px;
+    box-shadow:0 3px 10px rgba(0,0,0,.08);
+}
+
+.menu a{
+    text-decoration:none;
+    color:#333;
+    font-weight:600;
+    padding:8px 15px;
+    border-radius:8px;
+    transition:.2s;
+}
+
+.menu a:hover{
+    background:#2563eb;
+    color:white;
 }
 
 /* ---------- TARGETES ---------- */
 
 .cards{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:25px;
-    padding:35px;
-    margin-top:-35px;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+    padding:20px;
+    margin-top:-20px;
 }
 
 .card{
     background:white;
-    border-radius:20px;
-    padding:30px;
+    border-radius:15px;
+    padding:18px;
     text-align:center;
-    box-shadow:0 10px 25px rgba(0,0,0,.08);
-    border-top:6px solid #2563eb;
-    transition:0.3s;
-}
-
-.card:hover{
-    transform:translateY(-6px);
-    box-shadow:0 20px 35px rgba(0,0,0,.15);
+    box-shadow:0 5px 12px rgba(0,0,0,.08);
+    border-top:4px solid #2563eb;
 }
 
 .card h3{
     margin:0;
     color:#666;
-    font-size:18px;
+    font-size:16px;
 }
 
 .card h2{
-    margin:15px 0 0;
-    font-size:48px;
+    margin:8px 0 0;
+    font-size:34px;
     color:#2563eb;
 }
 
@@ -72,40 +91,48 @@ body{
 .grafics{
     display:grid;
     grid-template-columns:2fr 1fr;
-    gap:25px;
-    padding:0 35px 35px;
+    gap:15px;
+    padding:0 20px 20px;
 }
 
 .grafica{
     background:white;
-    border-radius:20px;
-    padding:25px;
-    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    border-radius:15px;
+    padding:18px;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+    margin-bottom:20px;
 }
 
 canvas{
     width:100% !important;
-    height:260px !important;
+    height:220px !important;
 }
 
-/* ---------- MENÚ ---------- */
+/* ---------- TAULA ---------- */
 
-.menu{
-    display:flex;
-    justify-content:center;
-    gap:40px;
-    background:white;
-    padding:18px;
-    box-shadow:0 3px 10px rgba(0,0,0,.08);
+.curses{
+    max-width:1100px;
+    margin:20px auto;
 }
 
-.menu a{
-    text-decoration:none;
-    color:#333;
-    font-weight:600;
-    transition:.2s;
+#taula-curses{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:15px;
 }
 
-.menu a:hover{
-    color:#2563eb;
+#taula-curses th{
+    background:#2563eb;
+    color:white;
+    padding:10px;
+    text-align:left;
+}
+
+#taula-curses td{
+    padding:10px;
+    border-bottom:1px solid #e5e7eb;
+}
+
+#taula-curses tr:hover{
+    background:#f8fafc;
 }
