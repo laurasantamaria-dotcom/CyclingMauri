@@ -1,65 +1,86 @@
 body{
     margin:0;
     font-family:Arial, Helvetica, sans-serif;
-    background:#f5f7fb;
+    background:#f4f7fb;
     color:#222;
 }
 
-header{
-    background:#1f4e79;
+/* ---------- CAPÇALERA ---------- */
+
+.hero{
+    background:linear-gradient(135deg,#0f172a,#2563eb);
     color:white;
+    padding:60px;
     text-align:center;
-    padding:30px;
+    border-radius:0 0 30px 30px;
 }
 
-header h1{
+.hero h1{
     margin:0;
-    font-size:40px;
+    font-size:52px;
 }
 
-header p{
-    margin-top:8px;
-    opacity:.8;
+.hero p{
+    font-size:22px;
+    margin:10px 0;
 }
+
+.subtitol{
+    opacity:.85;
+    font-size:16px;
+}
+
+/* ---------- TARGETES ---------- */
 
 .cards{
     display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:20px;
-    padding:30px;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+    padding:35px;
+    margin-top:-35px;
 }
 
 .card{
     background:white;
-    border-radius:15px;
-    box-shadow:0 5px 15px rgba(0,0,0,.08);
+    border-radius:20px;
+    padding:30px;
     text-align:center;
-    padding:25px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    border-top:6px solid #2563eb;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 20px 35px rgba(0,0,0,.15);
 }
 
 .card h3{
     margin:0;
     color:#666;
+    font-size:18px;
 }
 
 .card h2{
-    margin-top:10px;
-    font-size:40px;
-    color:#1f4e79;
+    margin:15px 0 0;
+    font-size:48px;
+    color:#2563eb;
 }
+
+/* ---------- GRÀFICS ---------- */
 
 .grafics{
     display:grid;
     grid-template-columns:2fr 1fr;
-    gap:20px;
-    padding:0 30px 30px;
+    gap:25px;
+    padding:0 35px 35px;
 }
 
 .grafica{
     background:white;
-    border-radius:15px;
-    padding:20px;
-    box-shadow:0 5px 15px rgba(0,0,0,.08);
+    border-radius:20px;
+    padding:25px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
 }
 
 canvas{
