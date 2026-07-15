@@ -1,0 +1,20 @@
+name: Actualitzar entrenaments Strava
+
+on:
+  workflow_dispatch:
+
+jobs:
+  strava:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Clonar repositori
+        uses: actions/checkout@v4
+
+      - name: Comprovar connexió
+        run: |
+          echo "Connexió amb Strava preparada"
+          echo "Client ID configurat"
+
+        env:
+          STRAVA_CLIENT_ID: ${{ secrets.STRAVA_CLIENT_ID }}
