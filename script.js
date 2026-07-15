@@ -138,6 +138,8 @@ new Chart(document.getElementById("copaCatalana"), {
 });
 
 const cursesEspanya = dadesValides.filter(c => c.nivell === "copa Espanya");
+console.log("Copa Espanya:", cursesEspanya);
+console.log("Nombre de curses:", cursesEspanya.length);
 
 new Chart(document.getElementById("copaEspanya"), {
     type: "line",
