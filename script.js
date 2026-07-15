@@ -1,61 +1,20 @@
-const curses = [12, 18, 9, 15, 7, 11, 5, 8, 6, 10];
-const noms = [
-    "C1","C2","C3","C4","C5",
-    "C6","C7","C8","C9","C10"
-];
+fetch("dades.json")
+  .then(response => response.json())
+  .then(dades => {
 
-// Evolució
-new Chart(document.getElementById("evolucio"), {
-    type: "line",
-    data: {
-        labels: noms,
-        datasets: [{
-            label: "Posició",
-            data: curses,
-            borderColor: "#1f4e79",
-            backgroundColor: "rgba(31,78,121,0.15)",
-            borderWidth: 3,
-            fill: true,
-            tension: 0.3
-        }]
-    },
-    options: {
-        responsive: true,
-        plugins: {
-            legend: {
-                display: false
-            }
-        },
-        scales: {
-            y: {
-                reverse: true,
-                beginAtZero: false
-            }
-        }
-    }
-});
+    // KPI
+    document.getElementById("curses").textContent = dades.length;
 
-// Nivells
-new Chart(document.getElementById("nivells"), {
-    type: "doughnut",
-    data: {
-        labels: [
-            "Catalana",
-            "Copa d'Espanya",
-            "Nacional",
-            "Altres"
-        ],
-        datasets: [{
-            data: [6, 6, 3, 1],
-            backgroundColor: [
-                "#2563eb",
-                "#f97316",
-                "#22c55e",
-                "#9ca3af"
-            ]
-        }]
-    },
-    options: {
-        responsive: true
-    }
-});
+    const millor = Math.min(...dades.map(c => c.posicio));
+    document.getElementById("millor").textContent = millor;
+
+    const top10 = dades.filter(c => c.posicio <= 10).length;
+    document.getElementById("top10").textContent = top10;
+
+    const mitjana = (
+      dades.reduce((suma, c) => suma + c.posicio, 0) / dades.length
+    ).toFixed(1);
+
+    document.getElementById("mitjana").textContent = mitjana;
+
+  });

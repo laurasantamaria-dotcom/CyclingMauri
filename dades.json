@@ -1,20 +1,20 @@
-fetch("dades.json")
-  .then(response => response.json())
-  .then(dades => {
-
-    // KPI
-    document.getElementById("curses").textContent = dades.length;
-
-    const millor = Math.min(...dades.map(c => c.posicio));
-    document.getElementById("millor").textContent = millor;
-
-    const top10 = dades.filter(c => c.posicio <= 10).length;
-    document.getElementById("top10").textContent = top10;
-
-    const mitjana = (
-      dades.reduce((suma, c) => suma + c.posicio, 0) / dades.length
-    ).toFixed(1);
-
-    document.getElementById("mitjana").textContent = mitjana;
-
-  });
+[
+  {
+    "data": "2026-03-15",
+    "cursa": "Girona",
+    "posicio": 8,
+    "nivell": "Catalana"
+  },
+  {
+    "data": "2026-04-02",
+    "cursa": "Vic",
+    "posicio": 12,
+    "nivell": "Nacional"
+  },
+  {
+    "data": "2026-04-18",
+    "cursa": "Pratdip",
+    "posicio": 5,
+    "nivell": "Copa d'Espanya"
+  }
+]
