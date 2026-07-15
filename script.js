@@ -1,6 +1,8 @@
 fetch("dades.json")
   .then(response => response.json())
-  .then(dades => {
+ .then(dades => {
+
+    console.log(dades);
 
     // ---------- KPI ----------
 
