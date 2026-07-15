@@ -110,8 +110,6 @@ console.log("Copa Catalana:", cursesCatalana);
 console.log(cursesCatalana.length);
 
 new Chart(document.getElementById("copaCatalana"), {
-
-new Chart(document.getElementById("copaCatalana"), {
     type: "line",
     data: {
         labels: cursesCatalana.map(c => c.cursa),
