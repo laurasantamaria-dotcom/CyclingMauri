@@ -2,28 +2,31 @@ fetch("dades.json")
   .then(response => response.json())
  .then(dades => {
 
+const dadesValides = dades.filter(c => !isNaN(Number(c.posicio)));
+
     console.log(dades);
 
     // ---------- KPI ----------
 
     document.getElementById("curses").textContent = dades.length;
 
-    const millor = Math.min(...dades.map(c => c.posicio));
+    const millor = Math.min(...dadesValides.map(c => Number(c.posicio)));
     document.getElementById("millor").textContent = millor;
 
-    const top10 = dades.filter(c => c.posicio <= 10).length;
+    const top10 = dadesValides.filter(c => Number(c.posicio) <= 10).length;
     document.getElementById("top10").textContent = top10;
 
     const mitjana = (
-      dades.reduce((suma, c) => suma + c.posicio, 0) / dades.length
-    ).toFixed(1);
+  dadesValides.reduce((suma, c) => suma + Number(c.posicio), 0) /
+  dadesValides.length
+).toFixed(1);
 
     document.getElementById("mitjana").textContent = mitjana;
 
     // ---------- Dades dels gràfics ----------
 
-    const curses = dades.map(c => c.cursa);
-    const posicions = dades.map(c => c.posicio);
+    const curses = dadesValides.map(c => c.cursa);
+const posicions = dadesValides.map(c => Number(c.posicio));
 
     // Comptar nivells
     const nivells = {};
