@@ -1,1 +1,20 @@
-
+[
+  {
+    "data": "2026-03-15",
+    "cursa": "Girona",
+    "posicio": 8,
+    "nivell": "Catalana"
+  },
+  {
+    "data": "2026-04-02",
+    "cursa": "Vic",
+    "posicio": 12,
+    "nivell": "Nacional"
+  },
+  {
+    "data": "2026-04-18",
+    "cursa": "Pratdip",
+    "posicio": 5,
+    "nivell": "Copa d'Espanya"
+  }
+]
