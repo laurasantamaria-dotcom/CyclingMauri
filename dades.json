@@ -1,20 +1,134 @@
 [
   {
-    "data": "2026-03-15",
-    "cursa": "Girona",
+    "data": "2026-01-25",
+    "cursa": "Trofeu Josep Florencio",
     "posicio": 8,
-    "nivell": "Catalana"
+    "nivell": "catalana"
   },
   {
-    "data": "2026-04-02",
-    "cursa": "Vic",
-    "posicio": 12,
-    "nivell": "Nacional"
+    "data": "2026-02-21",
+    "cursa": "Circuito del Guadiana- Don Benito",
+    "posicio": 108,
+    "nivell": "copa Espanya"
+  },
+  {
+    "data": "2026-02-28",
+    "cursa": "Memorial Juan Pujalte",
+    "posicio": 95,
+    "nivell": "copa Espanya"
+  },
+  {
+    "data": "2026-03-21",
+    "cursa": "Memorial Mariano Cabrero",
+    "posicio": 53,
+    "nivell": "altres"
+  },
+  {
+    "data": "2026-04-12",
+    "cursa": "Gran Premio Montemayor",
+    "posicio": "OOT",
+    "nivell": "copa Espanya"
   },
   {
     "data": "2026-04-18",
-    "cursa": "Pratdip",
-    "posicio": 5,
-    "nivell": "Copa d'Espanya"
+    "cursa": "Campionat de Catalunya RR Terraferma",
+    "posicio": 28,
+    "nivell": "catalana"
+  },
+  {
+    "data": "2026-04-19",
+    "cursa": "Trofeu Sant Jordi",
+    "posicio": 37,
+    "nivell": "catalana"
+  },
+  {
+    "data": "2026-04-26",
+    "cursa": "Memorial Fidel Bagan",
+    "posicio": 22,
+    "nivell": "catalana"
+  },
+  {
+    "data": "2026-05-02",
+    "cursa": "1a etapa ",
+    "posicio": 85,
+    "nivell": "nacional"
+  },
+  {
+    "data": "2026-05-03",
+    "cursa": "2a etapa ",
+    "posicio": 57,
+    "nivell": "nacional"
+  },
+  {
+    "data": "2026-05-15",
+    "cursa": "1a etapa",
+    "posicio": 52,
+    "nivell": "nacional"
+  },
+  {
+    "data": "2026-05-16",
+    "cursa": "2a etapa ",
+    "posicio": 99,
+    "nivell": "nacional"
+  },
+  {
+    "data": "2026-05-17",
+    "cursa": "3a etapa ",
+    "posicio": 96,
+    "nivell": "nacional"
+  },
+  {
+    "data": "2026-05-23",
+    "cursa": "Memorial Josep Segú",
+    "posicio": 11,
+    "nivell": "catalana"
+  },
+  {
+    "data": "2026-05-31",
+    "cursa": "Navás-Sant Boi",
+    "posicio": 78,
+    "nivell": "copa Espanya"
+  },
+  {
+    "data": "2026-06-06",
+    "cursa": "Urkiolako Igoera Klasica Bizcaia ",
+    "posicio": "OOT",
+    "nivell": "copa Espanya"
+  },
+  {
+    "data": "2026-06-13",
+    "cursa": "Clasica Araba Vitoria-Gasteiz",
+    "posicio": "DNF",
+    "nivell": "copa Espanya"
+  },
+  {
+    "data": "2026-06-18",
+    "cursa": "1a etapa Besaya",
+    "posicio": 102,
+    "nivell": "nacional"
+  },
+  {
+    "data": "2026-06-19",
+    "cursa": "2a etapa Besaya",
+    "posicio": 125,
+    "nivell": "nacional"
+  },
+  {
+    "data": "2026-06-20",
+    "cursa": "3a etapa Besaya",
+    "posicio": 103,
+    "nivell": "nacional"
+  },
+  {
+    "data": "2026-06-21",
+    "cursa": "4a etapa Besaya",
+    "posicio": 98,
+    "nivell": "nacional"
+  },
+  {
+    "data": "2026-07-12",
+    "cursa": "Copa catalana Reus",
+    "posicio": 7,
+    "nivell": "catalana"
   }
 ]
