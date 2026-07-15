@@ -1,8 +1,10 @@
 fetch("dades.json")
   .then(response => response.json())
- .then(dades => {
+  .then(dades => {
 
-const dadesValides = dades.filter(c => !isNaN(Number(c.posicio)));
+    const dadesValides = dades.filter(c =>
+        typeof c.posicio === "number"
+    );
 
     console.log(dades);
 
