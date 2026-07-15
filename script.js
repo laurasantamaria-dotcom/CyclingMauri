@@ -101,6 +101,41 @@ const posicions = dadesValides.map(c => Number(c.posicio));
       }
 
     });
+
+    // ---------- Gràfic Copa Catalana ----------
+
+const cursesCatalana = dadesValides.filter(c => c.nivell === "catalana");
+
+console.log(cursesCatalana);
+
+new Chart(document.getElementById("copaCatalana"), {
+    type: "line",
+    data: {
+        labels: cursesCatalana.map(c => c.cursa),
+        datasets: [{
+            label: "Posició",
+            data: cursesCatalana.map(c => c.posicio),
+            borderColor: "#16a34a",
+            backgroundColor: "rgba(22,163,74,0.15)",
+            fill: true,
+            tension: 0.3
+        }]
+    },
+    options: {
+        plugins: {
+            legend: {
+                display: false
+            }
+        },
+        scales: {
+            y: {
+                reverse: true,
+                beginAtZero: false
+            }
+        }
+    }
+});
+
 // ---------- Taula de curses ----------
 
 const tbody = document.querySelector("#taula-curses tbody");
