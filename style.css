@@ -10,7 +10,8 @@ body{
 .hero{
     background:linear-gradient(135deg,#0f172a,#2563eb);
     color:white;
-    padding:30px;
+    padding:40px 30px;
+}
     text-align:center;
     border-radius:0 0 20px 20px;
 }
@@ -67,11 +68,11 @@ body{
 
 .card{
     background:white;
-    border-radius:15px;
-    padding:18px;
+    border-radius:18px;
+    padding:22px;
     text-align:center;
-    box-shadow:0 5px 12px rgba(0,0,0,.08);
-    border-top:4px solid #2563eb;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+    border-top:5px solid #2563eb;
 }
 
 .card h3{
@@ -90,23 +91,24 @@ body{
 
 .grafics{
     display:grid;
-    grid-template-columns:1.4fr 1fr;
-    gap:20px;
-    padding:0 20px 20px;
-    max-width:1200px;
-    margin:0 auto;
+    grid-template-columns:2fr 1fr;
+    gap:25px;
+    padding:20px;
+    max-width:1300px;
+    margin:auto;
+    align-items:start;
 }
 
 .grafica{
     background:white;
     border-radius:15px;
-    padding:18px;
+    padding:20px;
     box-shadow:0 5px 15px rgba(0,0,0,.08);
     margin-bottom:20px;
-    height:320px;
+    min-height:420px;
 }
 
-#grafics canvas{
+.grafics canvas{
     width:100%;
 }
 
@@ -115,9 +117,10 @@ body{
 }
 
 #nivells{
-    max-width:280px;
-    max-height:280px;
-    margin:auto;
+    width:260px !important;
+    height:260px !important;
+    display:block;
+    margin:40px auto;
 }
 
 /* ---------- TAULA ---------- */
