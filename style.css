@@ -84,8 +84,11 @@ body{
 }
 
 canvas{
-    max-height:350px;
-}/* ---------- MENÚ ---------- */
+    width:100% !important;
+    height:260px !important;
+}
+
+/* ---------- MENÚ ---------- */
 
 .menu{
     display:flex;
