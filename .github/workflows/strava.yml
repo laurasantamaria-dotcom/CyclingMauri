@@ -11,23 +11,28 @@ jobs:
       - name: Clonar repositori
         uses: actions/checkout@v4
 
-      - name: Comprovar secrets
+      - name: Instal·lar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Instal·lar dependències
         run: |
-          echo "Client ID: $STRAVA_CLIENT_ID"
+          pip install requests
 
-          if [ -z "$STRAVA_CLIENT_SECRET" ]; then
-            echo "ERROR: falta STRAVA_CLIENT_SECRET"
-            exit 1
-          fi
-
-          if [ -z "$STRAVA_REFRESH_TOKEN" ]; then
-            echo "ERROR: falta STRAVA_REFRESH_TOKEN"
-            exit 1
-          fi
-
-          echo "Secrets correctes ✅"
-
+      - name: Executar script
         env:
           STRAVA_CLIENT_ID: ${{ secrets.STRAVA_CLIENT_ID }}
           STRAVA_CLIENT_SECRET: ${{ secrets.STRAVA_CLIENT_SECRET }}
           STRAVA_REFRESH_TOKEN: ${{ secrets.STRAVA_REFRESH_TOKEN }}
+        run: |
+          python scripts/strava.py
+
+      - name: Pujar entrenaments.json
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+
+          git add entrenaments.json
+          git commit -m "Actualització entrenaments" || echo "Sense canvis"
+          git push
