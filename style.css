@@ -106,9 +106,18 @@ body{
     height:320px;
 }
 
-canvas{
-    width:100% !important;
-    height:170px !important;
+#grafics canvas{
+    width:100%;
+}
+
+#evolucio{
+    height:220px !important;
+}
+
+#nivells{
+    max-width:280px;
+    max-height:280px;
+    margin:auto;
 }
 
 /* ---------- TAULA ---------- */
