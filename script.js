@@ -106,7 +106,10 @@ const posicions = dadesValides.map(c => Number(c.posicio));
 
 const cursesCatalana = dadesValides.filter(c => c.nivell === "catalana");
 
-console.log(cursesCatalana);
+console.log("Copa Catalana:", cursesCatalana);
+console.log(cursesCatalana.length);
+
+new Chart(document.getElementById("copaCatalana"), {
 
 new Chart(document.getElementById("copaCatalana"), {
     type: "line",
