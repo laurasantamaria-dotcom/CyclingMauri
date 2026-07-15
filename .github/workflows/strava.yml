@@ -1,10 +1,10 @@
-name: Actualitzar entrenaments Strava
+name: Actualitzar dades
 
 on:
   workflow_dispatch:
 
 jobs:
-  strava:
+  actualitzar:
     runs-on: ubuntu-latest
 
     steps:
@@ -16,23 +16,16 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Instal·lar dependències
-        run: |
-          pip install requests
+      - name: Actualitzar dades de Google Sheets
+        run: python scripts/csv_to_json.py
 
-      - name: Executar script
-        env:
-          STRAVA_CLIENT_ID: ${{ secrets.STRAVA_CLIENT_ID }}
-          STRAVA_CLIENT_SECRET: ${{ secrets.STRAVA_CLIENT_SECRET }}
-          STRAVA_REFRESH_TOKEN: ${{ secrets.STRAVA_REFRESH_TOKEN }}
-        run: |
-          python scripts/strava.py
-
-      - name: Pujar entrenaments.json
+      - name: Fer commit si hi ha canvis
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
 
-          git add entrenaments.json
-          git commit -m "Actualització entrenaments" || echo "Sense canvis"
+          git add dades.json
+
+          git diff --cached --quiet || git commit -m "Actualització automàtica de dades"
+
           git push
