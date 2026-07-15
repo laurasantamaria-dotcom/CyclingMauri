@@ -96,5 +96,22 @@ fetch("dades.json")
       }
 
     });
+// ---------- Taula de curses ----------
 
+const tbody = document.querySelector("#taula-curses tbody");
+
+dades.forEach(cursa => {
+
+  const fila = document.createElement("tr");
+
+  fila.innerHTML = `
+    <td>${cursa.data}</td>
+    <td>${cursa.cursa}</td>
+    <td>${cursa.posicio}</td>
+    <td>${cursa.nivell}</td>
+  `;
+
+  tbody.appendChild(fila);
+
+});
   });
