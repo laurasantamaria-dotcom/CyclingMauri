@@ -9,7 +9,7 @@
         url("img/mauri.jpeg");
 
     background-size:cover;
-    background-position:center;
+    background-position:center center;
 
     color:white;
 }
@@ -26,17 +26,18 @@
     justify-content:space-between;
     align-items:center;
 
-    padding:30px 60px;
+    padding:25px 60px;
     box-sizing:border-box;
 
     background:transparent;
     box-shadow:none;
 
-    z-index:10;
+    z-index:100;
 }
 
 .logo{
-    font-size:28px;
+    color:white;
+    font-size:24px;
     font-weight:700;
     letter-spacing:2px;
 }
@@ -49,11 +50,14 @@
 .menu-links a{
     color:white;
     text-decoration:none;
+    font-size:17px;
     font-weight:600;
+    margin-left:30px;
+    transition:.3s;
 }
 
 .menu-links a:hover{
-    opacity:.7;
+    color:#3b82f6;
 }
 
 /* Contingut */
@@ -74,7 +78,7 @@
 }
 
 .hero h1{
-    font-size:78px;
+    font-size:64px;
     line-height:0.95;
     margin:20px 0;
 }
@@ -136,20 +140,38 @@
 /* ---------- TARGETES ---------- */
 
 .cards{
+    position:relative;
+
     display:grid;
     grid-template-columns:repeat(4,1fr);
-    gap:15px;
-    padding:20px;
-    margin-top:-20px;
+    gap:25px;
+
+    max-width:1200px;
+    margin:-80px auto 40px;
+
+    padding:0 20px;
+
+    z-index:50;
 }
 
 .card{
-    background:white;
-    border-radius:18px;
-    padding:22px;
+    background:rgba(255,255,255,.96);
+
+    border-radius:20px;
+
+    padding:30px 20px;
+
     text-align:center;
-    box-shadow:0 8px 20px rgba(0,0,0,.08);
-    border-top:5px solid #2563eb;
+
+    box-shadow:0 20px 40px rgba(0,0,0,.15);
+
+    border:none;
+
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
 }
 
 .card h3{
