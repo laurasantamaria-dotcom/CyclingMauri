@@ -85,10 +85,15 @@ body{
 }
 
 .hero-content{
+
     position:relative;
+
     z-index:2;
-    max-width:600px;
-    margin-left:8%;
+
+    max-width:780px;
+
+    margin-left:5%;
+
 }
 
 .temporada{
@@ -105,9 +110,24 @@ body{
 }
 
 .hero h1{
-    font-size:clamp(3rem,7vw,5.5rem);
-    line-height:.95;
-    margin-bottom:20px;
+
+    font-family:"Barlow Condensed", sans-serif;
+
+    font-style:italic;
+    font-weight:800;
+
+    text-transform:uppercase;
+
+    font-size:clamp(6rem,11vw,10rem);
+
+    line-height:.82;
+
+    letter-spacing:-3px;
+
+    margin:10px 0 25px;
+
+    color:#fff;
+
 }
 
 .hero p{
@@ -118,18 +138,20 @@ body{
 
 .boto{
     display:inline-block;
+
     margin-top:35px;
 
-    padding:16px 34px;
+    padding:18px 42px;
 
-    border-radius:40px;
-
-   .boto{
     background:#d32f2f;
-    color:white;
-}
+    color:#ffffff !important;
+
+    border:none;
+    border-radius:45px;
 
     text-decoration:none;
+
+    font-size:1.3rem;
     font-weight:700;
 
     transition:.25s;
@@ -137,6 +159,16 @@ body{
 
 .boto:hover{
     background:#b71c1c;
+    color:#ffffff !important;
+
+    transform:translateY(-3px);
+    .boto:visited,
+.boto:link,
+.boto:active{
+    color:#ffffff !important;
+    padding:20px 50px;
+font-size:1.4rem;
+font-weight:800;
 }
 
 /* ==========================
