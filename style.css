@@ -32,8 +32,8 @@ body{
     align-items:center;
 
     background:
-        linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.65)),
-        url("img/mauri.jpeg");
+    linear-gradient(rgba(0,0,0,.15),rgba(0,0,0,.35)),
+    url("img/mauri.jpeg");
 
     background-size:cover;
     background-position:center;
@@ -81,7 +81,7 @@ body{
 }
 
 .menu-links a:hover{
-    color:#60a5fa;
+    color:#d32f2f;
 }
 
 .hero-content{
@@ -136,12 +136,11 @@ body{
     color:#f1f5f9;
 }
 
+
 .boto{
     display:inline-block;
-
     margin-top:35px;
-
-    padding:18px 42px;
+    padding:20px 50px;
 
     background:#d32f2f;
     color:#ffffff !important;
@@ -151,8 +150,8 @@ body{
 
     text-decoration:none;
 
-    font-size:1.3rem;
-    font-weight:700;
+    font-size:1.4rem;
+    font-weight:800;
 
     transition:.25s;
 }
@@ -160,15 +159,13 @@ body{
 .boto:hover{
     background:#b71c1c;
     color:#ffffff !important;
-
     transform:translateY(-3px);
-    .boto:visited,
+}
+
+.boto:visited,
 .boto:link,
 .boto:active{
     color:#ffffff !important;
-    padding:20px 50px;
-font-size:1.4rem;
-font-weight:800;
 }
 
 /* ==========================
@@ -242,9 +239,11 @@ main{
 
     margin-top:10px;
 
-    color:#2563eb;
+    color:#d32f2f;
 
-    font-size:2.2rem;
+    font-size:2.4rem;
+
+    font-weight:800;
 
 }
 
@@ -354,14 +353,7 @@ canvas{
 }
 
 #taula-curses th{
-
-    background:#2563eb;
-    color:white;
-
-    padding:16px;
-
-    text-align:left;
-
+    background:#d32f2f;
 }
 
 #taula-curses td{
@@ -494,10 +486,7 @@ canvas{
 
     font-size:clamp(4rem,8vw,7rem);
 
-}
-.hero h1{
-    transform:skewX(-10deg);
-}
+
 
 .hero p{
 
