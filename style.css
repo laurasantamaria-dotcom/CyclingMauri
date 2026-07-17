@@ -1,29 +1,106 @@
-body{
-    margin:0;
-    font-family:Arial, Helvetica, sans-serif;
-    background:#f4f7fb;
-    color:#222;
-}
-
-/* ---------- CAPÇALERA ---------- */
+/* ---------- HERO ---------- */
 
 .hero{
-    background:linear-gradient(135deg,#0f172a,#2563eb);
+    position:relative;
+    height:100vh;
+
+    background:
+        linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.65)),
+        url("img/Mauri.jpeg");
+
+    background-size:cover;
+    background-position:center;
+
     color:white;
-    padding:40px 30px;
 }
-    text-align:center;
-    border-radius:0 0 20px 20px;
+
+/* Menú */
+
+.menu{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:30px 60px;
+    box-sizing:border-box;
+
+    background:transparent;
+    box-shadow:none;
+
+    z-index:10;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:700;
+    letter-spacing:2px;
+}
+
+.menu-links{
+    display:flex;
+    gap:30px;
+}
+
+.menu-links a{
+    color:white;
+    text-decoration:none;
+    font-weight:600;
+}
+
+.menu-links a:hover{
+    opacity:.7;
+}
+
+/* Contingut */
+
+.hero-content{
+    position:absolute;
+    left:8%;
+    top:50%;
+
+    transform:translateY(-50%);
+
+    max-width:550px;
+}
+
+.temporada{
+    letter-spacing:3px;
+    color:#ddd;
 }
 
 .hero h1{
-    margin:0;
-    font-size:34px;
+    font-size:78px;
+    line-height:0.95;
+    margin:20px 0;
 }
 
 .hero p{
-    font-size:18px;
-    margin:6px 0;
+    font-size:20px;
+    line-height:1.7;
+    color:#f0f0f0;
+}
+
+.boto{
+    display:inline-block;
+    margin-top:30px;
+
+    background:#2563eb;
+    color:white;
+
+    padding:15px 30px;
+    border-radius:40px;
+
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.boto:hover{
+    background:#1d4ed8;
 }
 
 .subtitol{
