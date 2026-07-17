@@ -93,9 +93,14 @@ body{
 
 .temporada{
     display:inline-block;
+    color:#d32f2f;
+
+    font-weight:700;
+    text-transform:uppercase;
+
     letter-spacing:4px;
     font-size:.9rem;
-    opacity:.9;
+
     margin-bottom:18px;
 }
 
@@ -119,8 +124,10 @@ body{
 
     border-radius:40px;
 
-    background:#2563eb;
+   .boto{
+    background:#d32f2f;
     color:white;
+}
 
     text-decoration:none;
     font-weight:700;
@@ -129,8 +136,7 @@ body{
 }
 
 .boto:hover{
-    transform:translateY(-3px);
-    background:#1d4ed8;
+    background:#b71c1c;
 }
 
 /* ==========================
@@ -442,8 +448,23 @@ canvas{
 
 .hero h1{
 
-    font-size:3rem;
+    font-family:"Barlow Condensed", sans-serif;
 
+    font-style:italic;
+
+    font-weight:800;
+
+    text-transform:uppercase;
+
+    letter-spacing:1px;
+
+    line-height:.9;
+
+    font-size:clamp(4rem,8vw,7rem);
+
+}
+.hero h1{
+    transform:skewX(-10deg);
 }
 
 .hero p{
