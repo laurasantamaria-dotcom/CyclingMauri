@@ -1,20 +1,52 @@
-/* ---------- HERO ---------- */
+/* ==========================
+   CYCLING MAURI V2
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:"Poppins",sans-serif;
+    background:#f4f7fb;
+    color:#1f2937;
+    line-height:1.6;
+}
+
+/* ==========================
+   HERO
+========================== */
 
 .hero{
     position:relative;
     height:100vh;
+    min-height:700px;
+
+    display:flex;
+    align-items:center;
 
     background:
-        linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.65)),
+        linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.65)),
         url("img/mauri.jpeg");
 
     background-size:cover;
-    background-position:center center;
-
+    background-position:center;
     color:white;
 }
 
-/* Menú */
+.hero-overlay{
+    position:absolute;
+    inset:0;
+    background:linear-gradient(to right,
+        rgba(0,0,0,.45),
+        rgba(0,0,0,.15));
+}
 
 .menu{
     position:absolute;
@@ -26,227 +58,470 @@
     justify-content:space-between;
     align-items:center;
 
-    padding:25px 60px;
-    box-sizing:border-box;
-
-    background:transparent;
-    box-shadow:none;
-
+    padding:30px 7%;
     z-index:100;
 }
 
 .logo{
-    color:white;
-    font-size:24px;
-    font-weight:700;
-    letter-spacing:2px;
+    font-size:28px;
+    font-weight:800;
+    letter-spacing:3px;
 }
 
 .menu-links{
     display:flex;
-    gap:30px;
+    gap:35px;
 }
 
 .menu-links a{
     color:white;
     text-decoration:none;
-    font-size:17px;
     font-weight:600;
-    margin-left:30px;
-    transition:.3s;
+    transition:.25s;
 }
 
 .menu-links a:hover{
-    color:#3b82f6;
+    color:#60a5fa;
 }
 
-/* Contingut */
-
 .hero-content{
-    position:absolute;
-    left:8%;
-    top:55%;
-
-    transform:translateY(-50%);
-
-    max-width:550px;
+    position:relative;
+    z-index:2;
+    max-width:600px;
+    margin-left:8%;
 }
 
 .temporada{
-    letter-spacing:3px;
-    color:#ddd;
+    display:inline-block;
+    letter-spacing:4px;
+    font-size:.9rem;
+    opacity:.9;
+    margin-bottom:18px;
 }
 
 .hero h1{
-    font-size:64px;
-    line-height:0.95;
-    margin:20px 0;
+    font-size:clamp(3rem,7vw,5.5rem);
+    line-height:.95;
+    margin-bottom:20px;
 }
 
 .hero p{
-    font-size:20px;
-    line-height:1.7;
-    color:#f0f0f0;
+    font-size:1.2rem;
+    max-width:520px;
+    color:#f1f5f9;
 }
 
 .boto{
     display:inline-block;
-    margin-top:30px;
+    margin-top:35px;
+
+    padding:16px 34px;
+
+    border-radius:40px;
 
     background:#2563eb;
     color:white;
 
-    padding:15px 30px;
-    border-radius:40px;
-
     text-decoration:none;
-    font-weight:bold;
+    font-weight:700;
+
+    transition:.25s;
 }
 
 .boto:hover{
+    transform:translateY(-3px);
     background:#1d4ed8;
 }
 
-.subtitol{
-    opacity:.85;
-    font-size:15px;
+/* ==========================
+   MAIN
+========================== */
+
+main{
+    max-width:1350px;
+    margin:auto;
+    padding:0 20px;
 }
 
-/* ---------- MENÚ ---------- */
-
-.menu{
-    display:flex;
-    justify-content:center;
-    gap:20px;
-    background:white;
-    padding:12px;
-    box-shadow:0 3px 10px rgba(0,0,0,.08);
-}
-
-.menu a{
-    text-decoration:none;
-    color:#333;
-    font-weight:600;
-    padding:8px 15px;
-    border-radius:8px;
-    transition:.2s;
-}
-
-.menu a:hover{
-    background:#2563eb;
-    color:white;
-}
-
-/* ---------- TARGETES ---------- */
+/* ==========================
+   KPI CARDS
+========================== */
 
 .cards{
+
     position:relative;
+
+    margin-top:-90px;
+    margin-bottom:50px;
 
     display:grid;
     grid-template-columns:repeat(4,1fr);
     gap:25px;
 
-    max-width:1200px;
-    margin:-120px auto 40px;
-
-    padding:0 20px;
-
-    z-index:50;
+    z-index:10;
 }
 
 .card{
-    background:rgba(255,255,255,.96);
 
-    border-radius:20px;
+    background:white;
 
-    padding:30px 20px;
+    border-radius:22px;
+
+    padding:30px;
 
     text-align:center;
 
-    box-shadow:0 20px 40px rgba(0,0,0,.15);
+    text-decoration:none;
+    color:inherit;
 
-    border:none;
+    box-shadow:0 20px 45px rgba(0,0,0,.10);
 
-    transition:.3s;
+    transition:.25s;
 }
 
 .card:hover{
+
     transform:translateY(-8px);
+
+}
+
+.card span{
+
+    font-size:32px;
+
 }
 
 .card h3{
-    margin:0;
-    color:#666;
-    font-size:16px;
+
+    margin-top:12px;
+    color:#64748b;
+    font-size:15px;
+    font-weight:600;
+
 }
 
 .card h2{
-    margin:8px 0 0;
-    font-size:34px;
+
+    margin-top:10px;
+
     color:#2563eb;
+
+    font-size:2.2rem;
+
 }
 
-/* ---------- GRÀFICS ---------- */
+/* ==========================
+   DASHBOARD
+========================== */
 
-.grafics{
+.dashboard{
+
     display:grid;
     grid-template-columns:2fr 1fr;
     gap:25px;
-    padding:20px;
-    max-width:1300px;
-    margin:auto;
-    align-items:start;
+
+    margin-bottom:30px;
+
+}
+
+.dashboard.tres{
+
+    grid-template-columns:repeat(3,1fr);
+
 }
 
 .grafica{
+
     background:white;
-    border-radius:15px;
-    padding:20px;
-    box-shadow:0 5px 15px rgba(0,0,0,.08);
-    margin-bottom:20px;
-    min-height:420px;
+
+    border-radius:22px;
+
+    padding:28px;
+
+    box-shadow:0 10px 30px rgba(15,23,42,.08);
+
 }
 
-.grafics canvas{
-    width:100%;
+.grafica.gran{
+
+    min-height:480px;
+
+}
+
+.titol{
+
+    margin-bottom:20px;
+
+}
+
+.titol h2{
+
+    font-size:1.4rem;
+    color:#1e293b;
+    margin-bottom:4px;
+
+}
+
+.titol p{
+
+    color:#64748b;
+    font-size:.95rem;
+
+}
+
+canvas{
+
+    width:100% !important;
+
 }
 
 #evolucio{
-    height:220px !important;
+
+    height:330px !important;
+
 }
 
 #nivells{
-    width:260px !important;
-    height:260px !important;
+
+    width:280px !important;
+    height:280px !important;
+
+    margin:auto;
     display:block;
-    margin:40px auto;
+
 }
 
-/* ---------- TAULA ---------- */
+/* ==========================
+   TAULA
+========================== */
 
 .curses{
-    max-width:1100px;
-    margin:20px auto;
+
+    margin:40px 0 70px;
+
+}
+
+.taula-responsive{
+
+    overflow-x:auto;
+
 }
 
 #taula-curses{
+
     width:100%;
     border-collapse:collapse;
-    margin-top:15px;
+    min-width:700px;
+
 }
 
 #taula-curses th{
+
     background:#2563eb;
     color:white;
-    padding:10px;
+
+    padding:16px;
+
     text-align:left;
+
 }
 
 #taula-curses td{
-    padding:10px;
-    border-bottom:1px solid #e5e7eb;
+
+    padding:14px 16px;
+
+    border-bottom:1px solid #e2e8f0;
+
 }
 
-#taula-curses tr:hover{
-    background:#f8fafc;
+#taula-curses tbody tr{
+
+    transition:.2s;
+
 }
+
+#taula-curses tbody tr:hover{
+
+    background:#f8fafc;
+
+}
+
+/* ==========================
+   FOOTER
+========================== */
+
+.footer{
+
+    padding:50px 20px;
+
+    background:#0f172a;
+
+    color:white;
+
+    text-align:center;
+
+}
+
+.footer h3{
+
+    font-size:1.6rem;
+    margin-bottom:10px;
+    letter-spacing:2px;
+
+}
+
+.footer p{
+
+    color:#cbd5e1;
+
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media (max-width:1000px){
+
+.dashboard{
+
+    grid-template-columns:1fr;
+
+}
+
+.dashboard.tres{
+
+    grid-template-columns:1fr;
+
+}
+
+.cards{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+.hero{
+
+    min-height:760px;
+
+}
+
+}
+
+@media (max-width:768px){
+
+.menu{
+
+    padding:20px;
+
+    flex-direction:column;
+    gap:18px;
+
+}
+
+.menu-links{
+
+    gap:18px;
+    flex-wrap:wrap;
+    justify-content:center;
+
+}
+
+.hero{
+
+    height:auto;
+    min-height:700px;
+
+}
+
+.hero-content{
+
+    margin:180px 25px 80px;
+
+}
+
+.hero h1{
+
+    font-size:3rem;
+
+}
+
+.hero p{
+
+    font-size:1rem;
+
+}
+
+.cards{
+
+    margin-top:-60px;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:16px;
+
+}
+
+.card{
+
+    padding:22px;
+
+}
+
+.card h2{
+
+    font-size:1.8rem;
+
+}
+
+.grafica{
+
+    padding:20px;
+
+}
+
+#nivells{
+
+    width:220px !important;
+    height:220px !important;
+
+}
+
+}
+
+@media (max-width:520px){
+
+.cards{
+
+    grid-template-columns:1fr;
+
+}
+
+.hero h1{
+
+    font-size:2.5rem;
+
+}
+
+.logo{
+
+    font-size:22px;
+
+}
+
+.menu-links{
+
+    flex-direction:column;
+    gap:10px;
+
+}
+
+.boto{
+
+    width:100%;
+    text-align:center;
+
+}
+
+}
+

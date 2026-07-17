@@ -1,11 +1,18 @@
 <!DOCTYPE html>
 <html lang="ca">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Cycling Mauri</title>
 
     <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
@@ -15,21 +22,30 @@
 <header class="hero">
 
     <nav class="menu">
-        <div class="logo">CYCLING MAURI</div>
+
+        <div class="logo">
+            CYCLING MAURI
+        </div>
 
         <div class="menu-links">
             <a href="#">Inici</a>
             <a href="#dashboard">Dashboard</a>
             <a href="#llista-curses">Resultats</a>
         </div>
+
     </nav>
 
     <div class="hero-overlay"></div>
 
     <div class="hero-content">
-        <span class="temporada">TEMPORADA 2026</span>
 
-        <h1>CYCLING<br>MAURI</h1>
+        <span class="temporada">
+            TEMPORADA 2026
+        </span>
+
+        <h1>
+            CYCLING<br>MAURI
+        </h1>
 
         <p>
             Dashboard interactiu amb tots els resultats,
@@ -39,98 +55,144 @@
         <a href="#dashboard" class="boto">
             Veure Dashboard
         </a>
+
     </div>
 
 </header>
 
-<nav class="menu">
-    <a href="#">Dashboard</a>
-    <a href="#">Curses</a>
-    <a href="#">Entrenaments</a>
-    <a href="#">Estadístiques</a>
-</nav>
+<main>
 
 <section class="cards">
 
     <a href="#llista-curses" class="card">
+        <span>🏁</span>
         <h3>Curses</h3>
         <h2 id="curses">0</h2>
     </a>
 
     <div class="card">
+        <span>🥇</span>
         <h3>Millor resultat</h3>
         <h2 id="millor">0</h2>
     </div>
 
     <div class="card">
+        <span>🔟</span>
         <h3>Top 10</h3>
         <h2 id="top10">0</h2>
     </div>
 
     <div class="card">
+        <span>📊</span>
         <h3>Mitjana</h3>
         <h2 id="mitjana">0</h2>
     </div>
 
 </section>
 
-<section class="grafics">
+<section id="dashboard" class="dashboard">
 
-    <div class="grafica">
-        <h2>Evolució</h2>
+    <div class="grafica gran">
+
+        <div class="titol">
+            <h2>Evolució temporada</h2>
+            <p>Resultats cursa rere cursa</p>
+        </div>
+
         <canvas id="evolucio"></canvas>
+
     </div>
 
     <div class="grafica">
-        <h2>Nivells</h2>
+
+        <div class="titol">
+            <h2>Nivells</h2>
+        </div>
+
         <canvas id="nivells"></canvas>
+
     </div>
 
 </section>
 
-<section class="grafics">
+<section class="dashboard tres">
 
     <div class="grafica">
-        <h2>Copa Catalana</h2>
+
+        <div class="titol">
+            <h2>Copa Catalana</h2>
+        </div>
+
         <canvas id="copaCatalana"></canvas>
+
     </div>
 
     <div class="grafica">
-        <h2>Copa Espanya</h2>
+
+        <div class="titol">
+            <h2>Copa Espanya</h2>
+        </div>
+
         <canvas id="copaEspanya"></canvas>
+
     </div>
 
     <div class="grafica">
-        <h2>Nacionals</h2>
+
+        <div class="titol">
+            <h2>Campionats</h2>
+        </div>
+
         <canvas id="nacionals"></canvas>
+
     </div>
 
 </section>
 
 <section class="grafica curses" id="llista-curses">
 
-    <h2>🏁 Curses</h2>
+    <div class="titol">
+        <h2>🏁 Resultats de la temporada</h2>
+        <p>Totes les curses disputades</p>
+    </div>
 
-    <table id="taula-curses">
+    <div class="taula-responsive">
 
-        <thead>
-            <tr>
-                <th>Data</th>
-                <th>Cursa</th>
-                <th>Posició</th>
-                <th>Nivell</th>
-            </tr>
-        </thead>
+        <table id="taula-curses">
 
-        <tbody>
+            <thead>
+                <tr>
+                    <th>Data</th>
+                    <th>Cursa</th>
+                    <th>Posició</th>
+                    <th>Nivell</th>
+                </tr>
+            </thead>
 
-        </tbody>
+            <tbody>
 
-    </table>
+            </tbody>
+
+        </table>
+
+    </div>
 
 </section>
+
+</main>
+
+<footer class="footer">
+
+    <h3>CYCLING MAURI</h3>
+
+    <p>
+        Dashboard personal · Temporada 2026
+    </p>
+
+</footer>
 
 <script src="script.js"></script>
 
 </body>
+
 </html>
