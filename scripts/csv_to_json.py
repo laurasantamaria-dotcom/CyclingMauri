@@ -23,7 +23,7 @@ for fila in reader:
         "cursa": fila["CURSA"].strip(),
         "posicio": posicio,
         "nivell": fila["NIVELL"].strip(),
-        "context": fila["CONTEXT / TIPUS"].strip()
+        "context": fila["CONTEXT /TIPUS"].strip()
     })
 
 with open("dades.json", "w", encoding="utf-8") as f:
