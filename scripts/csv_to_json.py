@@ -13,16 +13,17 @@ dades = []
 
 for fila in reader:
 
-    posicio = fila["posicio"].strip()
+    posicio = fila["POSICIÓ"].strip()
 
     if posicio.isdigit():
         posicio = int(posicio)
 
     dades.append({
-        "data": fila["data"],
-        "cursa": fila["cursa"],
+        "data": fila["DATA"].strip(),
+        "cursa": fila["CURSA"].strip(),
         "posicio": posicio,
-        "nivell": fila["nivell"]
+        "nivell": fila["NIVELL"].strip(),
+        "context": fila["CONTEXT / TIPUS"].strip()
     })
 
 with open("dades.json", "w", encoding="utf-8") as f:
