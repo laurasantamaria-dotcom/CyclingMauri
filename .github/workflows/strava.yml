@@ -24,7 +24,7 @@ jobs:
       - name: Instal·lar dependències
         run: pip install requests
 
-            - name: Descarregar entrenaments de Strava
+      - name: Descarregar entrenaments de Strava
         run: python scripts/obtenir_token.py
         env:
           STRAVA_CLIENT_ID: ${{ secrets.STRAVA_CLIENT_ID }}
