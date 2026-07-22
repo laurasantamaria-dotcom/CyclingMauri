@@ -6,6 +6,10 @@ CLIENT_ID = os.environ["STRAVA_CLIENT_ID"]
 CLIENT_SECRET = os.environ["STRAVA_CLIENT_SECRET"]
 REFRESH_TOKEN = os.environ["STRAVA_REFRESH_TOKEN"]
 
+print("CLIENT_ID =", CLIENT_ID)
+print("CLIENT_SECRET longitud =", len(CLIENT_SECRET))
+print("REFRESH_TOKEN longitud =", len(REFRESH_TOKEN))
+
 # Renovar l'access token
 token = requests.post(
     "https://www.strava.com/oauth/token",
