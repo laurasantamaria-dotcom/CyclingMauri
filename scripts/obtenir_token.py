@@ -16,3 +16,4 @@ r = requests.post(
 )
 
 print(r.text)
+r.raise_for_status()
