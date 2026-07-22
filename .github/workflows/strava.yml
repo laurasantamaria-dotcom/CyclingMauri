@@ -25,7 +25,33 @@ jobs:
         run: pip install requests
 
       - name: Descarregar entrenaments de Strava
-        run: python scripts/obtenir_token.py
+        v4
+
+      - name: Instal·lar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Instal·lar dependències
+        run: pip install requests
+
+      - name: Descarregar entrenaments de Strava
+      run: |
+        python scripts/obtenir_token.py
+        python scripts/strava.py
+      env:
+        STRAVA_CLIENT_ID: ${{ secrets.STRAVA_CLIENT_ID }}
+        STRAVA_CLIENT_SECRET: ${{ secrets.STRAVA_CLIENT_SECRET }}
+        STRAVA_REFRESH_TOKEN: ${{ secrets.STRAVA_REFRESH_TOKEN }}
+        STRAVA_CODE: ${{ secrets.STRAVA_CODE }}
+
+      - name: Fer commit si hi ha canvis
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+
+          git add entrenaments.json
+
         env:
           STRAVA_CLIENT_ID: ${{ secrets.STRAVA_CLIENT_ID }}
           STRAVA_CLIENT_SECRET: ${{ secrets.STRAVA_CLIENT_SECRET }}
