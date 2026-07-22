@@ -21,7 +21,9 @@ token = requests.post(
     },
 )
 
-token.raise_for_status()
+if not token.ok:
+    print(token.text)
+    token.raise_for_status()
 
 token_data = token.json()
 
