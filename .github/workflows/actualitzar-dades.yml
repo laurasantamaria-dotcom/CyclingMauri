@@ -1,0 +1,30 @@
+name: Actualitzar dades
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 * * * *"
+
+jobs:
+  actualitzar:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Clonar repositori
+        uses: actions/checkout@v4
+
+      - name: Instal·lar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Actualitzar dades
+        run: python scripts/csv_to_json.py
+
+      - name: Guardar dades actualitzades
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add dades.json
+          git diff --cached --quiet || git commit -m "Actualització automàtica de dades"
+          git push
