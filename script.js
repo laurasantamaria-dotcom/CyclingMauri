@@ -196,7 +196,37 @@ new Chart(document.getElementById("nacionals"), {
         }
     }
 });
+const cursesUCI = dadesValides.filter(c => c.nivell === "uci");
 
+console.log("UCI:", cursesUCI);
+console.log("Nombre de curses UCI:", cursesUCI.length);
+
+new Chart(document.getElementById("uci"), {
+    type: "line",
+    data: {
+        labels: cursesUCI.map(c => c.cursa),
+        datasets: [{
+            data: cursesUCI.map(c => c.posicio),
+            borderColor: "#7c3aed",
+            backgroundColor: "rgba(124,58,237,0.15)",
+            fill: true,
+            tension: 0.3
+        }]
+    },
+    options: {
+        plugins: {
+            legend: {
+                display: false
+            }
+        },
+        scales: {
+            y: {
+                reverse: true,
+                beginAtZero: false
+            }
+        }
+    }
+});
 // ---------- Taula de curses ----------
 
 const tbody = document.querySelector("#taula-curses tbody");
