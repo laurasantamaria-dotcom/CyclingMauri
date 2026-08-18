@@ -3,7 +3,7 @@
     "data": "25/01/2026",
     "cursa": "Trofeu Josep Florencio",
     "posicio": 41,
-    "nivell": "altres",
+    "nivell": "",
     "context": "debut temporada"
   },
   {
@@ -187,5 +187,40 @@
     "posicio": 4,
     "nivell": "catalana",
     "context": "A l'escapada de 4 corredors"
+  },
+  {
+    "data": "",
+    "cursa": "Ribera del duero - general",
+    "posicio": "",
+    "nivell": "uci",
+    "context": ""
+  },
+  {
+    "data": "20/08/2026",
+    "cursa": "1a etapa Ribera del duero",
+    "posicio": "",
+    "nivell": "uci",
+    "context": "cronoescalada"
+  },
+  {
+    "data": "21/08/2026",
+    "cursa": "2a etapa Ribera del duero",
+    "posicio": "",
+    "nivell": "uci",
+    "context": ""
+  },
+  {
+    "data": "22/08/2026",
+    "cursa": "2a etapa Ribera del duero",
+    "posicio": "",
+    "nivell": "uci",
+    "context": ""
+  },
+  {
+    "data": "23/08/2026",
+    "cursa": "4a etapa Ribera del duero",
+    "posicio": "",
+    "nivell": "uci",
+    "context": ""
   }
 ]
