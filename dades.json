@@ -191,7 +191,7 @@
   {
     "data": "",
     "cursa": "Ribera del duero - general",
-    "posicio": "",
+    "posicio": 120,
     "nivell": "uci",
     "context": ""
   },
@@ -219,7 +219,7 @@
   {
     "data": "23/08/2026",
     "cursa": "4a etapa Ribera del duero",
-    "posicio": "",
+    "posicio": 108,
     "nivell": "uci",
     "context": ""
   }
