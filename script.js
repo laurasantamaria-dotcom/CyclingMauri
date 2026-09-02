@@ -43,80 +43,106 @@ fetch("dades.json")
     );
 
 
-    // ---------- Comptar nivells ----------
+    // ---------- Gràfic evolució temporada ----------
 
-    const nivells = {};
+    new Chart(document.getElementById("evolucio"), {
 
-    dades.forEach(c => {
+      type: "line",
 
-      nivells[c.nivell] =
-        (nivells[c.nivell] || 0) + 1;
+      data: {
 
-    });
+        labels: curses,
 
+        datasets: [{
 
-    // ---------- Gràfic evolució ----------
+          label: "Posició",
 
-    new Chart(
-      document.getElementById("evolucio"),
-      {
+          data: posicions,
 
-        type: "line",
+          borderColor: "#2563eb",
 
-        data: {
+          backgroundColor: "rgba(37,99,235,.15)",
 
-          labels: curses,
+          fill: true,
 
-          datasets: [{
+          tension: .3
 
-            label: "Posició",
+        }]
 
-            data: posicions,
+      },
 
-            borderColor: "#2563eb",
+      options: {
 
-            backgroundColor:
-              "rgba(37,99,235,.15)",
+        plugins: {
 
-            fill: true,
+          legend: {
 
-            tension: .3
+            display: false
 
-          }]
+          }
 
         },
 
-        options: {
+        scales: {
 
-          plugins: {
+          y: {
 
-            legend: {
+            reverse: true,
 
-              display: false
-
-            }
-
-          },
-
-          scales: {
-
-            y: {
-
-              reverse: true,
-
-              beginAtZero: false
-
-            }
+            beginAtZero: false
 
           }
 
         }
 
       }
-    );
+
+    });
 
 
     // ---------- Gràfic nivells ----------
+
+    const nivells = {};
+
+    dades.forEach(c => {
+
+      const nivell = c.nivell
+        .trim()
+        .toLowerCase();
+
+      if (nivell !== "") {
+
+        nivells[nivell] =
+          (nivells[nivell] || 0) + 1;
+
+      }
+
+    });
+
+
+    const nomsNivells = Object.keys(nivells);
+
+    const valorsNivells = Object.values(nivells);
+
+
+    // Cada nivell té el seu color
+
+    const colorsNivells = {
+
+      "copa espanya": "#2563eb",
+
+      "catalana": "#22c55e",
+
+      "nacional": "#dc2626",
+
+      "uci": "#f97316",
+
+      "pista": "#7c3aed",
+
+      "altres": "#9ca3af"
+
+    };
+
 
     new Chart(
       document.getElementById("nivells"),
@@ -126,54 +152,49 @@ fetch("dades.json")
 
         data: {
 
-          labels: Object.keys(nivells),
+          labels: nomsNivells,
 
           datasets: [{
 
-            data: Object.values(nivells),
+            data: valorsNivells,
 
             backgroundColor:
-              Object.keys(nivells).map(nivell => {
+              nomsNivells.map(
+                nivell =>
+                  colorsNivells[nivell] || "#9ca3af"
+              ),
 
-                const colors = {
+            borderColor: "#ffffff",
 
-                  "copa Espanya": "#2563eb",
-
-                  "catalana": "#22c55e",
-
-                  "uci": "#f97316",
-
-                  "nacional": "#dc2626",
-
-                  "pista": "#7c3aed",
-
-                  "altres": "#9ca3af"
-
-                };
-
-                return colors[nivell] || "#9ca3af";
-
-              })
+            borderWidth: 3
 
           }]
 
         }
 
       }
+
     );
 
 
-    // ---------- Gràfic Copa Catalana ----------
+    // ---------- Copa Catalana ----------
 
     const cursesCatalana =
       dadesValides.filter(
-        c => c.nivell === "catalana"
+        c => c.nivell.trim().toLowerCase() === "catalana"
       );
+
 
     console.log(
       "Copa Catalana:",
       cursesCatalana
     );
+
+    console.log(
+      "Nombre de curses:",
+      cursesCatalana.length
+    );
+
 
     new Chart(
       document.getElementById("copaCatalana"),
@@ -183,17 +204,15 @@ fetch("dades.json")
 
         data: {
 
-          labels: cursesCatalana.map(
-            c => c.cursa
-          ),
+          labels:
+            cursesCatalana.map(c => c.cursa),
 
           datasets: [{
 
             label: "Posició",
 
-            data: cursesCatalana.map(
-              c => c.posicio
-            ),
+            data:
+              cursesCatalana.map(c => c.posicio),
 
             borderColor: "#16a34a",
 
@@ -235,20 +254,31 @@ fetch("dades.json")
         }
 
       }
+
     );
 
 
-    // ---------- Gràfic Copa Espanya ----------
+    // ---------- Copa Espanya ----------
 
     const cursesEspanya =
       dadesValides.filter(
-        c => c.nivell === "copa Espanya"
+        c =>
+          c.nivell
+            .trim()
+            .toLowerCase() === "copa espanya"
       );
+
 
     console.log(
       "Copa Espanya:",
       cursesEspanya
     );
+
+    console.log(
+      "Nombre de curses:",
+      cursesEspanya.length
+    );
+
 
     new Chart(
       document.getElementById("copaEspanya"),
@@ -258,15 +288,15 @@ fetch("dades.json")
 
         data: {
 
-          labels: cursesEspanya.map(
-            c => c.cursa
-          ),
+          labels:
+            cursesEspanya.map(c => c.cursa),
 
           datasets: [{
 
-            data: cursesEspanya.map(
-              c => c.posicio
-            ),
+            label: "Posició",
+
+            data:
+              cursesEspanya.map(c => c.posicio),
 
             borderColor: "#2563eb",
 
@@ -308,15 +338,26 @@ fetch("dades.json")
         }
 
       }
+
     );
 
 
-    // ---------- Gràfic Nacionals ----------
+    // ---------- Nacionals ----------
 
     const cursesNacionals =
       dadesValides.filter(
-        c => c.nivell === "nacional"
+        c =>
+          c.nivell
+            .trim()
+            .toLowerCase() === "nacional"
       );
+
+
+    console.log(
+      "Nacionals:",
+      cursesNacionals
+    );
+
 
     new Chart(
       document.getElementById("nacionals"),
@@ -326,15 +367,15 @@ fetch("dades.json")
 
         data: {
 
-          labels: cursesNacionals.map(
-            c => c.cursa
-          ),
+          labels:
+            cursesNacionals.map(c => c.cursa),
 
           datasets: [{
 
-            data: cursesNacionals.map(
-              c => c.posicio
-            ),
+            label: "Posició",
+
+            data:
+              cursesNacionals.map(c => c.posicio),
 
             borderColor: "#dc2626",
 
@@ -376,15 +417,20 @@ fetch("dades.json")
         }
 
       }
+
     );
 
 
-    // ---------- Gràfic UCI ----------
+    // ---------- UCI ----------
 
     const cursesUCI =
       dadesValides.filter(
-        c => c.nivell === "uci"
+        c =>
+          c.nivell
+            .trim()
+            .toLowerCase() === "uci"
       );
+
 
     console.log(
       "UCI:",
@@ -396,6 +442,7 @@ fetch("dades.json")
       cursesUCI.length
     );
 
+
     new Chart(
       document.getElementById("uci"),
       {
@@ -404,15 +451,15 @@ fetch("dades.json")
 
         data: {
 
-          labels: cursesUCI.map(
-            c => c.cursa
-          ),
+          labels:
+            cursesUCI.map(c => c.cursa),
 
           datasets: [{
 
-            data: cursesUCI.map(
-              c => c.posicio
-            ),
+            label: "Posició",
+
+            data:
+              cursesUCI.map(c => c.posicio),
 
             borderColor: "#f97316",
 
@@ -454,6 +501,7 @@ fetch("dades.json")
         }
 
       }
+
     );
 
 
@@ -464,10 +512,15 @@ fetch("dades.json")
         "#taula-curses tbody"
       );
 
+
+    tbody.innerHTML = "";
+
+
     dades.forEach(cursa => {
 
       const fila =
         document.createElement("tr");
+
 
       fila.innerHTML = `
 
@@ -481,8 +534,18 @@ fetch("dades.json")
 
       `;
 
+
       tbody.appendChild(fila);
 
     });
+
+  })
+
+  .catch(error => {
+
+    console.error(
+      "Error carregant dades.json:",
+      error
+    );
 
   });
