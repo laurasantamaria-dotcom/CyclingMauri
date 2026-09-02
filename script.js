@@ -139,7 +139,9 @@ fetch("dades.json")
 
       "pista": "#7c3aed",
 
-      "altres": "#9ca3af"
+      "altres": "#9ca3af",
+
+      "social": "#ec4899"
 
     };
 
@@ -181,19 +183,9 @@ fetch("dades.json")
 
     const cursesCatalana =
       dadesValides.filter(
-        c => c.nivell.trim().toLowerCase() === "catalana"
+        c =>
+          c.nivell.trim().toLowerCase() === "catalana"
       );
-
-
-    console.log(
-      "Copa Catalana:",
-      cursesCatalana
-    );
-
-    console.log(
-      "Nombre de curses:",
-      cursesCatalana.length
-    );
 
 
     new Chart(
@@ -263,21 +255,8 @@ fetch("dades.json")
     const cursesEspanya =
       dadesValides.filter(
         c =>
-          c.nivell
-            .trim()
-            .toLowerCase() === "copa espanya"
+          c.nivell.trim().toLowerCase() === "copa espanya"
       );
-
-
-    console.log(
-      "Copa Espanya:",
-      cursesEspanya
-    );
-
-    console.log(
-      "Nombre de curses:",
-      cursesEspanya.length
-    );
 
 
     new Chart(
@@ -347,16 +326,8 @@ fetch("dades.json")
     const cursesNacionals =
       dadesValides.filter(
         c =>
-          c.nivell
-            .trim()
-            .toLowerCase() === "nacional"
+          c.nivell.trim().toLowerCase() === "nacional"
       );
-
-
-    console.log(
-      "Nacionals:",
-      cursesNacionals
-    );
 
 
     new Chart(
@@ -426,21 +397,8 @@ fetch("dades.json")
     const cursesUCI =
       dadesValides.filter(
         c =>
-          c.nivell
-            .trim()
-            .toLowerCase() === "uci"
+          c.nivell.trim().toLowerCase() === "uci"
       );
-
-
-    console.log(
-      "UCI:",
-      cursesUCI
-    );
-
-    console.log(
-      "Nombre de curses UCI:",
-      cursesUCI.length
-    );
 
 
     new Chart(
@@ -508,10 +466,7 @@ fetch("dades.json")
     // ---------- Taula de curses ----------
 
     const tbody =
-      document.querySelector(
-        "#taula-curses tbody"
-      );
-
+      document.querySelector("#taula-curses tbody");
 
     tbody.innerHTML = "";
 
