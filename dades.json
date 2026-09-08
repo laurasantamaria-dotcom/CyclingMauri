@@ -222,5 +222,68 @@
     "posicio": 108,
     "nivell": "uci",
     "context": ""
+  },
+  {
+    "data": "",
+    "cursa": "Vuelta Talavera - general",
+    "posicio": "",
+    "nivell": "DNF",
+    "context": ""
+  },
+  {
+    "data": "03/09/2026",
+    "cursa": "1a etapa vuelta Talavera",
+    "posicio": "",
+    "nivell": "50",
+    "context": ""
+  },
+  {
+    "data": "04/09/2026",
+    "cursa": "2a etapa vuelta Talavera",
+    "posicio": "",
+    "nivell": "31",
+    "context": ""
+  },
+  {
+    "data": "05/09/2026",
+    "cursa": "3a etapa vuelta Talavera",
+    "posicio": "",
+    "nivell": "57",
+    "context": ""
+  },
+  {
+    "data": "06/09/2026",
+    "cursa": "4a etapa vuelta Talavera",
+    "posicio": "",
+    "nivell": "DNF",
+    "context": ""
+  },
+  {
+    "data": "",
+    "cursa": "Vuelta Subbètica",
+    "posicio": "",
+    "nivell": "",
+    "context": ""
+  },
+  {
+    "data": "11/09/2026",
+    "cursa": "1a vuelta Subbètica",
+    "posicio": "",
+    "nivell": "",
+    "context": ""
+  },
+  {
+    "data": "12/09/2026",
+    "cursa": "2a vuelta Subbètica",
+    "posicio": "",
+    "nivell": "",
+    "context": ""
+  },
+  {
+    "data": "13/09/2026",
+    "cursa": "3a vuelta Subbètica",
+    "posicio": "",
+    "nivell": "",
+    "context": ""
   }
 ]
