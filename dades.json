@@ -233,22 +233,22 @@
   {
     "data": "03/09/2026",
     "cursa": "1a etapa vuelta Talavera",
-    "posicio": "",
-    "nivell": "50",
+    "posicio": 50,
+    "nivell": "nacional",
     "context": ""
   },
   {
     "data": "04/09/2026",
     "cursa": "2a etapa vuelta Talavera",
-    "posicio": "",
-    "nivell": "31",
+    "posicio": 31,
+    "nivell": "nacional",
     "context": ""
   },
   {
     "data": "05/09/2026",
     "cursa": "3a etapa vuelta Talavera",
-    "posicio": "",
-    "nivell": "57",
+    "posicio": 57,
+    "nivell": "nacional",
     "context": ""
   },
   {
