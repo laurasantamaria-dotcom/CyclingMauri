@@ -260,8 +260,8 @@
   },
   {
     "data": "",
-    "cursa": "Vuelta Subbètica",
-    "posicio": "",
+    "cursa": "Vuelta Subbètica - general",
+    "posicio": 70,
     "nivell": "nacional",
     "context": ""
   },
@@ -284,6 +284,13 @@
     "cursa": "3a vuelta Subbètica",
     "posicio": "",
     "nivell": "nacional",
+    "context": ""
+  },
+  {
+    "data": "26/09/2026",
+    "cursa": "Gran premi ciutat del Prat",
+    "posicio": 14,
+    "nivell": "catalana",
     "context": ""
   }
 ]
