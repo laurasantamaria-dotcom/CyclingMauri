@@ -74,26 +74,19 @@ body{
 
 .temporadas{
     display:flex;
+    flex-direction:row;
     align-items:center;
-    gap:12px;
-    margin-left:30px;
+    justify-content:center;
+    gap:15px;
+    margin:0;
 }
 
 .temporadas a{
-    font-size:30px;
+    font-size:32px;
     font-weight:800;
-    text-decoration:none;
-
-    color:#22c55e;
-
     padding:4px 12px;
-
-    transition:.25s;
-}
-
-.temporadas a:hover{
-    transform:scale(1.08);
-    color:#86efac;
+    text-decoration:none;
+    color:#22c55e;
 }
 
 .temporadas .temporada-activa{
