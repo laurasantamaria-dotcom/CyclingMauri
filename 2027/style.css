@@ -81,7 +81,7 @@ body{
 }
 
 .menu-links a:hover{
-    color:#d32f2f;
+    color:#0f766e;
 }
 
 .hero-content{
@@ -98,7 +98,7 @@ body{
 
 .temporada{
     display:inline-block;
-    color:#d32f2f;
+    color:#0f766e;
 
     font-weight:700;
     text-transform:uppercase;
@@ -142,7 +142,7 @@ body{
     margin-top:35px;
     padding:20px 50px;
 
-    background:#d32f2f;
+    background:#0f766e;
     color:#ffffff !important;
 
     border:none;
@@ -157,7 +157,7 @@ body{
 }
 
 .boto:hover{
-    background:#b71c1c;
+    background:#115e59;
     color:#ffffff !important;
     transform:translateY(-3px);
 }
@@ -239,7 +239,7 @@ main{
 
     margin-top:10px;
 
-    color:#d32f2f;
+    color:#0f766e;
 
     font-size:2.4rem;
 
@@ -353,7 +353,7 @@ canvas{
 }
 
 #taula-curses th{
-    background:#d32f2f;
+    background:#0f766e;
 }
 
 #taula-curses td{
@@ -486,7 +486,7 @@ canvas{
 
     font-size:clamp(4rem,8vw,7rem);
 
-
+}
 
 .hero p{
 
