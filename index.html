@@ -20,22 +20,6 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>MAURI JIMÉNEZ</title>
-
-    <link rel="stylesheet" href="style.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&display=swap" rel="stylesheet">
-
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-</head>
-
 <body>
 
 <header class="hero">
@@ -46,13 +30,16 @@
             Cycling Mauri
         </div>
 
- <div class="menu-links">
-    <a href="index.html">2026</a>
-    <a href="2027/index.html">2027</a>
-    <a href="https://es.firstcycling.com/rider.php?r=268877" target="_blank">FirstCycling</a>
-    <a href="https://www.procyclingstats.com/rider/mauri-jimenez" target="_blank">ProCyclingStats</a>
-    <a href="#llista-curses">Resultats</a>
-</div>
+        <div class="temporadas">
+            <a href="index.html" class="temporada-activa">2026</a>
+            <a href="2027/index.html">2027</a>
+        </div>
+
+        <div class="menu-links">
+            <a href="https://es.firstcycling.com/rider.php?r=268877" target="_blank">FirstCycling</a>
+            <a href="https://www.procyclingstats.com/rider/mauri-jimenez" target="_blank">ProCyclingStats</a>
+            <a href="#llista-curses">Resultats</a>
+        </div>
 
     </nav>
 
@@ -169,13 +156,14 @@
 
     <div class="grafica">
 
-    <div class="titol">
-        <h2>UCI</h2>
+        <div class="titol">
+            <h2>UCI</h2>
+        </div>
+
+        <canvas id="uci"></canvas>
+
     </div>
 
-    <canvas id="uci"></canvas>
-
-</div>
 </section>
 
 <section class="grafica curses" id="llista-curses">
@@ -199,7 +187,6 @@
             </thead>
 
             <tbody>
-
             </tbody>
 
         </table>
