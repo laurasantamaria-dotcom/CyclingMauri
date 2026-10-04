@@ -33,7 +33,7 @@ body{
 
     background:
     linear-gradient(rgba(0,0,0,.15),rgba(0,0,0,.35)),
-    url(url("../img/CE73B3E8-5798-472D-8523-4639A7D48D4D.jpeg"););
+    url("img/mauri.jpeg");
 
     background-size:cover;
     background-position:center;
@@ -55,7 +55,7 @@ body{
     width:100%;
 
     display:flex;
-    justify-content:space-between;
+    justify-content:flex-start;
     align-items:center;
 
     padding:30px 7%;
@@ -68,9 +68,46 @@ body{
     letter-spacing:3px;
 }
 
+/* ==========================
+   SELECTOR 2026 / 2027
+========================== */
+
+.temporadas{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin-left:30px;
+}
+
+.temporadas a{
+    font-size:30px;
+    font-weight:800;
+    text-decoration:none;
+
+    color:#22c55e;
+
+    padding:4px 12px;
+
+    transition:.25s;
+}
+
+.temporadas a:hover{
+    transform:scale(1.08);
+    color:#86efac;
+}
+
+.temporadas .temporada-activa{
+    color:#d32f2f;
+}
+
+/* ==========================
+   ENLACES
+========================== */
+
 .menu-links{
     display:flex;
     gap:35px;
+    margin-left:auto;
 }
 
 .menu-links a{
@@ -81,8 +118,12 @@ body{
 }
 
 .menu-links a:hover{
-    color:#0f766e;
+    color:#d32f2f;
 }
+
+/* ==========================
+   HERO CONTENT
+========================== */
 
 .hero-content{
 
@@ -98,7 +139,7 @@ body{
 
 .temporada{
     display:inline-block;
-    color:#0f766e;
+    color:#d32f2f;
 
     font-weight:700;
     text-transform:uppercase;
@@ -136,13 +177,12 @@ body{
     color:#f1f5f9;
 }
 
-
 .boto{
     display:inline-block;
     margin-top:35px;
     padding:20px 50px;
 
-    background:#0f766e;
+    background:#d32f2f;
     color:#ffffff !important;
 
     border:none;
@@ -157,7 +197,7 @@ body{
 }
 
 .boto:hover{
-    background:#115e59;
+    background:#b71c1c;
     color:#ffffff !important;
     transform:translateY(-3px);
 }
@@ -215,31 +255,25 @@ main{
 }
 
 .card:hover{
-
     transform:translateY(-8px);
-
 }
 
 .card span{
-
     font-size:32px;
-
 }
 
 .card h3{
-
     margin-top:12px;
     color:#64748b;
     font-size:15px;
     font-weight:600;
-
 }
 
 .card h2{
 
     margin-top:10px;
 
-    color:#0f766e;
+    color:#d32f2f;
 
     font-size:2.4rem;
 
@@ -262,9 +296,7 @@ main{
 }
 
 .dashboard.tres{
-
     grid-template-columns:repeat(3,1fr);
-
 }
 
 .grafica{
@@ -280,15 +312,11 @@ main{
 }
 
 .grafica.gran{
-
     min-height:480px;
-
 }
 
 .titol{
-
     margin-bottom:20px;
-
 }
 
 .titol h2{
@@ -307,15 +335,11 @@ main{
 }
 
 canvas{
-
     width:100% !important;
-
 }
 
 #evolucio{
-
     height:330px !important;
-
 }
 
 #nivells{
@@ -333,15 +357,11 @@ canvas{
 ========================== */
 
 .curses{
-
     margin:40px 0 70px;
-
 }
 
 .taula-responsive{
-
     overflow-x:auto;
-
 }
 
 #taula-curses{
@@ -353,7 +373,7 @@ canvas{
 }
 
 #taula-curses th{
-    background:#0f766e;
+    background:#d32f2f;
 }
 
 #taula-curses td{
@@ -365,15 +385,11 @@ canvas{
 }
 
 #taula-curses tbody tr{
-
     transition:.2s;
-
 }
 
 #taula-curses tbody tr:hover{
-
     background:#f8fafc;
-
 }
 
 /* ==========================
@@ -401,9 +417,7 @@ canvas{
 }
 
 .footer p{
-
     color:#cbd5e1;
-
 }
 
 /* ==========================
@@ -412,157 +426,161 @@ canvas{
 
 @media (max-width:1000px){
 
-.dashboard{
+    .dashboard{
+        grid-template-columns:1fr;
+    }
 
-    grid-template-columns:1fr;
+    .dashboard.tres{
+        grid-template-columns:1fr;
+    }
 
-}
+    .cards{
+        grid-template-columns:repeat(2,1fr);
+    }
 
-.dashboard.tres{
-
-    grid-template-columns:1fr;
-
-}
-
-.cards{
-
-    grid-template-columns:repeat(2,1fr);
-
-}
-
-.hero{
-
-    min-height:760px;
+    .hero{
+        min-height:760px;
+    }
 
 }
 
-}
+/* ==========================
+   TABLET / MÒBIL
+========================== */
 
 @media (max-width:768px){
 
-.menu{
+    .menu{
 
-    padding:20px;
+        padding:20px;
 
-    flex-direction:column;
-    gap:18px;
+        flex-direction:column;
+        gap:15px;
+
+    }
+
+    .logo{
+        font-size:24px;
+    }
+
+    .temporadas{
+        margin-left:0;
+        gap:10px;
+    }
+
+    .temporadas a{
+        font-size:28px;
+        padding:3px 10px;
+    }
+
+    .menu-links{
+
+        gap:18px;
+        flex-wrap:wrap;
+        justify-content:center;
+
+    }
+
+    .hero{
+
+        height:auto;
+        min-height:700px;
+
+    }
+
+    .hero-content{
+
+        margin:210px 25px 80px;
+
+    }
+
+    .hero h1{
+
+        font-family:"Barlow Condensed", sans-serif;
+
+        font-style:italic;
+
+        font-weight:800;
+
+        text-transform:uppercase;
+
+        letter-spacing:1px;
+
+        line-height:.9;
+
+        font-size:clamp(4rem,8vw,7rem);
+
+    }
+
+    .hero p{
+        font-size:1rem;
+    }
+
+    .cards{
+
+        margin-top:-60px;
+
+        grid-template-columns:1fr 1fr;
+
+        gap:16px;
+
+    }
+
+    .card{
+        padding:22px;
+    }
+
+    .card h2{
+        font-size:1.8rem;
+    }
+
+    .grafica{
+        padding:20px;
+    }
+
+    #nivells{
+
+        width:220px !important;
+        height:220px !important;
+
+    }
 
 }
 
-.menu-links{
-
-    gap:18px;
-    flex-wrap:wrap;
-    justify-content:center;
-
-}
-
-.hero{
-
-    height:auto;
-    min-height:700px;
-
-}
-
-.hero-content{
-
-    margin:180px 25px 80px;
-
-}
-
-.hero h1{
-
-    font-family:"Barlow Condensed", sans-serif;
-
-    font-style:italic;
-
-    font-weight:800;
-
-    text-transform:uppercase;
-
-    letter-spacing:1px;
-
-    line-height:.9;
-
-    font-size:clamp(4rem,8vw,7rem);
-
-}
-
-.hero p{
-
-    font-size:1rem;
-
-}
-
-.cards{
-
-    margin-top:-60px;
-
-    grid-template-columns:1fr 1fr;
-
-    gap:16px;
-
-}
-
-.card{
-
-    padding:22px;
-
-}
-
-.card h2{
-
-    font-size:1.8rem;
-
-}
-
-.grafica{
-
-    padding:20px;
-
-}
-
-#nivells{
-
-    width:220px !important;
-    height:220px !important;
-
-}
-
-}
+/* ==========================
+   MÒBIL PETIT
+========================== */
 
 @media (max-width:520px){
 
-.cards{
+    .cards{
+        grid-template-columns:1fr;
+    }
 
-    grid-template-columns:1fr;
+    .hero h1{
+        font-size:2.5rem;
+    }
 
-}
+    .logo{
+        font-size:22px;
+    }
 
-.hero h1{
+    .temporadas a{
+        font-size:26px;
+    }
 
-    font-size:2.5rem;
+    .menu-links{
 
-}
+        flex-direction:column;
+        gap:10px;
 
-.logo{
+    }
 
-    font-size:22px;
+    .boto{
 
-}
+        width:100%;
+        text-align:center;
 
-.menu-links{
-
-    flex-direction:column;
-    gap:10px;
-
-}
-
-.boto{
-
-    width:100%;
-    text-align:center;
-
-}
+    }
 
 }
