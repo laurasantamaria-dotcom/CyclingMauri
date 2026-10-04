@@ -2,7 +2,7 @@ import csv
 import json
 import urllib.request
 
-URL = "https://docs.google.com/spreadsheets/d/1H0FelbYejrgKoqOWcoqZmbbW1juH51bRHm37kH4aiaQ/export?format=csv&gid=1636782970""
+URL = "https://docs.google.com/spreadsheets/d/1H0FelbYejrgKoqOWcoqZmbbW1juH51bRHm37kH4aiaQ/export?format=csv&gid=1636782970"
 
 with urllib.request.urlopen(URL) as response:
     lines = response.read().decode("utf-8").splitlines()
@@ -26,7 +26,7 @@ for fila in reader:
         "context": fila["CONTEXT /TIPUS"].strip()
     })
 
-with open("dades_2027.json", "w", encoding="utf-8") as f:
+with open("2027/dades.json", "w", encoding="utf-8") as f:
     json.dump(dades, f, ensure_ascii=False, indent=2)
 
-print(f"{len(dades)} curses guardades a dades_2027.json")
+print(f"{len(dades)} curses guardades a 2027/dades.json")
