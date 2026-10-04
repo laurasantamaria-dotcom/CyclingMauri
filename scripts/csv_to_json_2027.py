@@ -2,7 +2,7 @@ import csv
 import json
 import urllib.request
 
-URL = "https://docs.google.com/spreadsheets/d/1-6ce30oG63ZkPMIkWeMYqgGpr-EtMdDuLz43JWJ--6Q/export?format=csv&gid=0"
+URL = "URL = "https://docs.google.com/spreadsheets/d/1H0FelbYejrgKoqOWcoqZmbbW1juH51bRHm37kH4aiaQ/export?format=csv&gid=1636782970""
 
 with urllib.request.urlopen(URL) as response:
     lines = response.read().decode("utf-8").splitlines()
