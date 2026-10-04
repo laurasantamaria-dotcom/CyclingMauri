@@ -1,1 +1,568 @@
-    /* 2027 */
+/* ==========================
+   CYCLING MAURI V2
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:"Poppins",sans-serif;
+    background:#f4f7fb;
+    color:#1f2937;
+    line-height:1.6;
+}
+
+/* ==========================
+   HERO
+========================== */
+
+.hero{
+    position:relative;
+    height:100vh;
+    min-height:700px;
+
+    display:flex;
+    align-items:center;
+
+    background:
+    linear-gradient(rgba(0,0,0,.15),rgba(0,0,0,.35)),
+    url("img/mauri.jpeg");
+
+    background-size:cover;
+    background-position:center;
+    color:white;
+}
+
+.hero-overlay{
+    position:absolute;
+    inset:0;
+    background:linear-gradient(to right,
+        rgba(0,0,0,.45),
+        rgba(0,0,0,.15));
+}
+
+.menu{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:30px 7%;
+    z-index:100;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:800;
+    letter-spacing:3px;
+}
+
+.menu-links{
+    display:flex;
+    gap:35px;
+}
+
+.menu-links a{
+    color:white;
+    text-decoration:none;
+    font-weight:600;
+    transition:.25s;
+}
+
+.menu-links a:hover{
+    color:#d32f2f;
+}
+
+.hero-content{
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:780px;
+
+    margin-left:5%;
+
+}
+
+.temporada{
+    display:inline-block;
+    color:#d32f2f;
+
+    font-weight:700;
+    text-transform:uppercase;
+
+    letter-spacing:4px;
+    font-size:.9rem;
+
+    margin-bottom:18px;
+}
+
+.hero h1{
+
+    font-family:"Barlow Condensed", sans-serif;
+
+    font-style:italic;
+    font-weight:800;
+
+    text-transform:uppercase;
+
+    font-size:clamp(6rem,11vw,10rem);
+
+    line-height:.82;
+
+    letter-spacing:-3px;
+
+    margin:10px 0 25px;
+
+    color:#fff;
+
+}
+
+.hero p{
+    font-size:1.2rem;
+    max-width:520px;
+    color:#f1f5f9;
+}
+
+
+.boto{
+    display:inline-block;
+    margin-top:35px;
+    padding:20px 50px;
+
+    background:#d32f2f;
+    color:#ffffff !important;
+
+    border:none;
+    border-radius:45px;
+
+    text-decoration:none;
+
+    font-size:1.4rem;
+    font-weight:800;
+
+    transition:.25s;
+}
+
+.boto:hover{
+    background:#b71c1c;
+    color:#ffffff !important;
+    transform:translateY(-3px);
+}
+
+.boto:visited,
+.boto:link,
+.boto:active{
+    color:#ffffff !important;
+}
+
+/* ==========================
+   MAIN
+========================== */
+
+main{
+    max-width:1350px;
+    margin:auto;
+    padding:0 20px;
+}
+
+/* ==========================
+   KPI CARDS
+========================== */
+
+.cards{
+
+    position:relative;
+
+    margin-top:-90px;
+    margin-bottom:50px;
+
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
+
+    z-index:10;
+}
+
+.card{
+
+    background:white;
+
+    border-radius:22px;
+
+    padding:30px;
+
+    text-align:center;
+
+    text-decoration:none;
+    color:inherit;
+
+    box-shadow:0 20px 45px rgba(0,0,0,.10);
+
+    transition:.25s;
+}
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.card span{
+
+    font-size:32px;
+
+}
+
+.card h3{
+
+    margin-top:12px;
+    color:#64748b;
+    font-size:15px;
+    font-weight:600;
+
+}
+
+.card h2{
+
+    margin-top:10px;
+
+    color:#d32f2f;
+
+    font-size:2.4rem;
+
+    font-weight:800;
+
+}
+
+/* ==========================
+   DASHBOARD
+========================== */
+
+.dashboard{
+
+    display:grid;
+    grid-template-columns:2fr 1fr;
+    gap:25px;
+
+    margin-bottom:30px;
+
+}
+
+.dashboard.tres{
+
+    grid-template-columns:repeat(3,1fr);
+
+}
+
+.grafica{
+
+    background:white;
+
+    border-radius:22px;
+
+    padding:28px;
+
+    box-shadow:0 10px 30px rgba(15,23,42,.08);
+
+}
+
+.grafica.gran{
+
+    min-height:480px;
+
+}
+
+.titol{
+
+    margin-bottom:20px;
+
+}
+
+.titol h2{
+
+    font-size:1.4rem;
+    color:#1e293b;
+    margin-bottom:4px;
+
+}
+
+.titol p{
+
+    color:#64748b;
+    font-size:.95rem;
+
+}
+
+canvas{
+
+    width:100% !important;
+
+}
+
+#evolucio{
+
+    height:330px !important;
+
+}
+
+#nivells{
+
+    width:280px !important;
+    height:280px !important;
+
+    margin:auto;
+    display:block;
+
+}
+
+/* ==========================
+   TAULA
+========================== */
+
+.curses{
+
+    margin:40px 0 70px;
+
+}
+
+.taula-responsive{
+
+    overflow-x:auto;
+
+}
+
+#taula-curses{
+
+    width:100%;
+    border-collapse:collapse;
+    min-width:700px;
+
+}
+
+#taula-curses th{
+    background:#d32f2f;
+}
+
+#taula-curses td{
+
+    padding:14px 16px;
+
+    border-bottom:1px solid #e2e8f0;
+
+}
+
+#taula-curses tbody tr{
+
+    transition:.2s;
+
+}
+
+#taula-curses tbody tr:hover{
+
+    background:#f8fafc;
+
+}
+
+/* ==========================
+   FOOTER
+========================== */
+
+.footer{
+
+    padding:50px 20px;
+
+    background:#0f172a;
+
+    color:white;
+
+    text-align:center;
+
+}
+
+.footer h3{
+
+    font-size:1.6rem;
+    margin-bottom:10px;
+    letter-spacing:2px;
+
+}
+
+.footer p{
+
+    color:#cbd5e1;
+
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media (max-width:1000px){
+
+.dashboard{
+
+    grid-template-columns:1fr;
+
+}
+
+.dashboard.tres{
+
+    grid-template-columns:1fr;
+
+}
+
+.cards{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+.hero{
+
+    min-height:760px;
+
+}
+
+}
+
+@media (max-width:768px){
+
+.menu{
+
+    padding:20px;
+
+    flex-direction:column;
+    gap:18px;
+
+}
+
+.menu-links{
+
+    gap:18px;
+    flex-wrap:wrap;
+    justify-content:center;
+
+}
+
+.hero{
+
+    height:auto;
+    min-height:700px;
+
+}
+
+.hero-content{
+
+    margin:180px 25px 80px;
+
+}
+
+.hero h1{
+
+    font-family:"Barlow Condensed", sans-serif;
+
+    font-style:italic;
+
+    font-weight:800;
+
+    text-transform:uppercase;
+
+    letter-spacing:1px;
+
+    line-height:.9;
+
+    font-size:clamp(4rem,8vw,7rem);
+
+
+
+.hero p{
+
+    font-size:1rem;
+
+}
+
+.cards{
+
+    margin-top:-60px;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:16px;
+
+}
+
+.card{
+
+    padding:22px;
+
+}
+
+.card h2{
+
+    font-size:1.8rem;
+
+}
+
+.grafica{
+
+    padding:20px;
+
+}
+
+#nivells{
+
+    width:220px !important;
+    height:220px !important;
+
+}
+
+}
+
+@media (max-width:520px){
+
+.cards{
+
+    grid-template-columns:1fr;
+
+}
+
+.hero h1{
+
+    font-size:2.5rem;
+
+}
+
+.logo{
+
+    font-size:22px;
+
+}
+
+.menu-links{
+
+    flex-direction:column;
+    gap:10px;
+
+}
+
+.boto{
+
+    width:100%;
+    text-align:center;
+
+}
+
+}
