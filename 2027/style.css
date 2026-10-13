@@ -175,7 +175,7 @@ body{
     margin-top:35px;
     padding:20px 50px;
 
-    background:#d32f2f;
+    background:#22c55e;
     color:#ffffff !important;
 
     border:none;
@@ -190,7 +190,7 @@ body{
 }
 
 .boto:hover{
-    background:#b71c1c;
+    background:#16a34a;
     color:#ffffff !important;
     transform:translateY(-3px);
 }
